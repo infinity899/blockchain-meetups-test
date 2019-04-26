@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+    <img src="./assets/header.svg" alt="">
     <router-view>
     </router-view>
     <Footer/>
@@ -21,13 +22,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './scss/variables';
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $text-primary;
   margin-top: 60px;
 }
 </style>
