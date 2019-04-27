@@ -1,0 +1,16 @@
+{
+  "cities" : [
+    {
+        "city" : "San Francisco",
+        "city_image": "sanfrancisco.png"
+    },
+    {
+        "city" : "San Jose",
+        "city_image": "sanjose.png"
+    },
+    {
+        "city" : "Seatle",
+        "city_image": "seatle.png"
+    }
+  ]
+}

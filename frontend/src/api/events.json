@@ -1,0 +1,28 @@
+{
+  "events" : [
+    {
+    "event_title": "event_title",
+    "event_subtitle" : "event_subtitle",
+    "event_description": "event_description",
+    "event_publisher_name": "event_publisher",
+    "event_publisher_email": "fake@email.com",
+    "event_date": "23 Aug 2019",
+    "event_cover": "img",
+    "event_attendings": "123+",
+    "event_city": "California",
+    "event_address": "event_address"
+    },
+    {
+      "event_title": "event_title",
+      "event_subtitle" : "event_subtitle",
+      "event_description": "event_description",
+      "event_publisher_name": "event_publisher",
+      "event_publisher_email": "fake@email.com",
+      "event_date": "23 Aug 2019",
+      "event_cover": "img",
+      "event_attendings": "123+",
+      "event_city": "event_city",
+      "event_address": "event_address"
+    }
+  ]
+}
