@@ -1,8 +1,10 @@
 <template>
-<header class="header">
+<header class="header full-width">
     <div class="navbar">
         <div class="navbar-logo">
-            <img src="../assets/mini_logo.png" alt="logo">
+            <router-link to="/">
+                 <img src="../assets/mini_logo.png" alt="logo">
+            </router-link>
         </div>
         <ul ref="links" class="header-links" v-on:click="getCity">   
             <li class="header-links-item">
@@ -20,8 +22,11 @@
 </template>
 
 <script>
+
 export default {
   name: 'Header',
+  components: {
+  },
   props: {
   },
   methods: {
@@ -31,7 +36,8 @@ export default {
   },
   mounted() {
       // gets the city from link on mount in case of refresh app or sharing route
-      return this.$store.state.city = this.$refs.links.querySelector('.router-link-active').text.toLowerCase();
+      if (this.$refs.links.querySelector('.router-link-active'))
+         return this.$store.state.city = this.$refs.links.querySelector('.router-link-active').text.toLowerCase();
   }
 }
 </script>
@@ -43,6 +49,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
 
     &-logo {
         width: 100px;
@@ -69,6 +77,11 @@ export default {
             font-size: 22px;
             letter-spacing: 0;
             text-align: center;
+
+            @media screen and(max-width: 600px) {
+                font-size: 12px;
+                margin: 0 4px;
+            }   
 
             a.router-link-active {
                 color: $text-primary;

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-bind:class="{ 'main-page': this.$route.path == '/' }">
     <Header/>
     <router-view></router-view>
     <Footer/>
@@ -15,7 +15,9 @@ export default {
   name: 'app',
   components: {
     Header,
-    Footer
+    Footer,
+  },
+  mounted() {
   }
 }
 </script>
@@ -27,10 +29,27 @@ export default {
 #app {
   max-width: 1280px;
   margin: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   font-family: 'Helvetica', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $text-primary;
 }
+
+#app.main-page {
+  max-width: none;
+  width: 100%;
+
+  .header {
+    background-color: transparent;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
 </style>
